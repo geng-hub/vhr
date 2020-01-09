@@ -2,6 +2,8 @@ package org.javaboy.vhr.mapper;
 
 import org.javaboy.vhr.model.EmpSalary;
 
+import java.util.List;
+
 public interface EmpSalaryMapper {
     int deleteByPrimaryKey(Integer id);
 
@@ -14,4 +16,6 @@ public interface EmpSalaryMapper {
     int updateByPrimaryKeySelective(EmpSalary record);
 
     int updateByPrimaryKey(EmpSalary record);
+
+    List<EmpSalary> getEmpSalaryTable(Integer eid);
 }

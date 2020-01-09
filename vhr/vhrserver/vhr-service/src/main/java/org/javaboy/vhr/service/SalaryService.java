@@ -11,7 +11,7 @@ import java.util.List;
 @Service
 public class SalaryService {
     @Autowired
-    SalaryMapper salaryMapper;
+    private SalaryMapper salaryMapper;
 
     public List<Salary> getAllSalaries() {
         return salaryMapper.getAllSalaries();
@@ -29,4 +29,9 @@ public class SalaryService {
     public Integer updateSalaryById(Salary salary) {
         return salaryMapper.updateByPrimaryKeySelective(salary);
     }
+
+    public Salary getgetSalaryById(Integer id) {
+        return salaryMapper.selectByPrimaryKey(id);
+    }
+
 }

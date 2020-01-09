@@ -7,6 +7,26 @@ public class EmpSalary {
 
     private Integer sid;
 
+    private Employee employee;
+
+    private Salary salary;
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    public Salary getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Salary salary) {
+        this.salary = salary;
+    }
+
     public Integer getId() {
         return id;
     }

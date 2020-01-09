@@ -15,7 +15,7 @@ public class Salary {
 
     private Integer trafficSalary;
 
-    private Integer allSalary;
+    private float allSalary;
 
     private Integer pensionBase;
 
@@ -74,12 +74,13 @@ public class Salary {
         this.trafficSalary = trafficSalary;
     }
 
-    public Integer getAllSalary() {
+    public float getAllSalary() {
         return allSalary;
     }
 
     public void setAllSalary(Integer allSalary) {
-        this.allSalary = allSalary;
+        this.allSalary = basicSalary+bonus+lunchSalary+trafficSalary+pensionBase*
+                pensionPer+medicalBase*medicalPer+accumulationFundBase*accumulationFundPer;
     }
 
     public Integer getPensionBase() {

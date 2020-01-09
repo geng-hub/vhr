@@ -15,6 +15,12 @@
     from empsalary
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="getEmpSalaryTable" resultMap="BaseResultMap">
+    SELECT e.name,s.allSalary,s.createDate
+    FROM employee e,salary s,empsalary es
+    WHERE e.id=es.eid AND s.id=es.sid AND es.eid=#{eid}
+    ORDER BY s.createDate desc
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from empsalary
     where id = #{id,jdbcType=INTEGER}
